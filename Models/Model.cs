@@ -19,5 +19,9 @@ namespace vega.Models
 
         public int MakeId { get; set; } //Make Model has to have same type of variable to connect object Make and ID
 
+        public Feature Feature {get; set;}
+
+        public int FeatureId { get; set; }
+
     }
 }
