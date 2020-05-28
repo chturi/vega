@@ -15,9 +15,45 @@
    <select id="model" class="form-control">
     <option value=""></option>
     <option *ngFor="let m of models" [value]="m.name" >{{m.name}}</option>
-
-
    </select>
   </div>
+
+  <p>Is this vehicle registered?</p>
+  <div class="radio">
+    <label for="registered" class="radio-inline">
+      <input type="radio" id="registered" value ="true" name="isRegistered"> Yes
+    </label>
+    <label for="notRegistered" class="radio-inline">
+      <input type="radio"  id="notRegistered" value ="false" name="isRegistered"> No
+    </label>
+  </div>
+ 
+
+  <h2>Features</h2>
+  <div class="checkbox" *ngFor="let f of features">
+    <label for="feature{{ f.id }}">
+      <input type="checkbox" id="feature{{ f.id }}"> {{ f.name }}
+    </label>
+  </div>
+
+
+<h2>Contact</h2>
+
+<div class="form-group">
+  <label for="contactName">Name</label>
+  <input id="contactName" type="text" class="form-control">
+</div>
+
+<div class="form-group">
+  <label for="contactPhone">Phone</label>
+  <input id="contactPhone" type="text" class="form-control">
+</div>
+
+<div class="form-group">
+  <label for="contactEmail">Email</label>
+  <input for="contactEmail" type="text" class="form-control">
+</div>
+
+<button class="btn btn-primary">Save</button>
 
 </form>

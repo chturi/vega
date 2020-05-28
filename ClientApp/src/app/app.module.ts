@@ -1,5 +1,5 @@
 import { Http, HttpModule } from '@angular/http';
-import { MakeService } from './Services/make.service';
+import { VehicleService } from './Services/vehicle.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms'
 import { NgModule } from '@angular/core';
@@ -34,7 +34,7 @@ import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
       { path: 'fetch-data', component: FetchDataComponent },
     ])
   ],
-  providers: [MakeService],
+  providers: [VehicleService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
