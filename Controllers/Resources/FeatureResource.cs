@@ -12,13 +12,5 @@ namespace vega.Controllers.Resources
         public string Name { get; set; }
 
 
-        public ICollection<ModelResource> Models {get; set;}
-
-        public FeatureResource(){
-
-            Models = new Collection<ModelResource>();
-            
-        }
-
     }
 }

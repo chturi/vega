@@ -17,14 +17,6 @@ namespace vega.Models
         public string Name { get; set; }
 
 
-        public ICollection<Model> Models {get; set;}
-
-        public Feature(){
-
-            Models = new Collection<Model>();
-            
-        }
-
 
     }
 }

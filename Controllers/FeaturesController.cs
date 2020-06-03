@@ -26,7 +26,7 @@ namespace vega.Controllers
         public async Task<IEnumerable<FeatureResource>> GetFeatures ()
         {
 
-           var features = await context.Features.Include(m => m.Models).ToListAsync();
+           var features = await context.Features.ToListAsync();
 
             return mapper.Map<List<Feature>, List<FeatureResource>>(features);
         }
