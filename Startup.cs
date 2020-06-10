@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using vega.Persistence;
+using vega.Core;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 
@@ -24,7 +25,8 @@ namespace vega
         public void ConfigureServices(IServiceCollection services)
         {
             
-           
+            services.AddScoped<IVehicleRepository, VehicleRepository>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             services.AddDbContext<VegaDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("Default"))); //connection string generetes Database at startup
             services.AddAutoMapper();

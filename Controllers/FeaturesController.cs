@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using vega.Controllers.Resources;
 using vega.Persistence;
 using Microsoft.EntityFrameworkCore;
-using vega.Models;
+using vega.Core.Models;
 
 namespace vega.Controllers
 {
@@ -23,12 +23,12 @@ namespace vega.Controllers
         }
 
         [HttpGet("api/features")]
-        public async Task<IEnumerable<FeatureResource>> GetFeatures ()
+        public async Task<IEnumerable<KeyValuePairResource>> GetFeatures ()
         {
 
            var features = await context.Features.ToListAsync();
 
-            return mapper.Map<List<Feature>, List<FeatureResource>>(features);
+            return mapper.Map<List<Feature>, List<KeyValuePairResource>>(features);
         }
 
 
