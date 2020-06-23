@@ -65,8 +65,8 @@ export class VehicleService {
       return parts.join('&');
 
       }
-  }
+}
 
   
 
-}
+
