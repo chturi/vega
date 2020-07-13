@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { VehicleFormComponent } from './vehicle-form/vehicle-form.component';
+import { PaginationComponent } from './shared/pagination.component';
 
 import { ToastrModule } from 'ngx-toastr';
 import { CommonModule } from '@angular/common'
@@ -28,6 +29,7 @@ import { VehicleListComponent } from './vehicle-list/vehicle-list.component'
     FetchDataComponent,
     VehicleFormComponent,
     VehicleListComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
