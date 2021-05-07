@@ -31,7 +31,7 @@
     "font-awesome": "^4.7.0",
     "ngx-toastr": "^8.1.1",
     "rxjs": "^5.5.6",
-    "underscore": "^1.8.3",
+    "underscore": "^1.12.1",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
